@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DASH - Home</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap"rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+<body>
+	<!--header -->
+	<header class="header">
+		<div class="header__content">
+			<!--header logo-->
+			<a href="index.html" class="header__logo">
+				<h4>Dashboard</h4>
+			</a>
+			<!--header logo-->
+			<!--header menu btn-->
+			<button class="header__btn " type="button">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			<!--header menu btn-->
+		</div>
+	</header>
+	<!--header -->
+	<!-- Sidebar -->
+	<div class="sidebar">
+		<h4>Dash.</h4>
+		<div class="sidebarmenu">
+			<!-- sidebar nav -->
+			<ul class="sidebar__nav" class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="sidebar__nav-item">
+					<img src="images/dashboard_icon.png">
+					<a href="#vtab1" data-toggle="tab">Manager</a>
+				</li>
+				<li class="sidebar__nav-item">
+					<img src="images/transaction_icon.png">
+					<a href="#">Waiter</a>
+				</li>
+				<li class="sidebar__nav-item">
+					<img src="images/schedule_icon.png">
+					<a href="#">Cashier</a>
+				</li>
+				<li class="sidebar__nav-item">
+					<img src="images/user_icon.png">
+					<a href="#">Collaction</a>
+				</li>
+				<!-- <li class="sidebar__nav-item">
+					<img src="images/setting_icon.png" alt="">
+					<a href="#">Settings</a>
+				</li> -->
+			</ul>
+			<ul class="sidebar_nav">
+				<li class="sidebar__nav-item"><img src="images/logout.png"><a href="#">Log out</a></li>
+				<li class="sidebar__nav-item"><img src="images/setting_icon.png"><a href="#">Setting</a></li>
+			</ul>
+			<!-- end sidebar nav -->
+		</div>
+	</div>
+	<!-- Sidebar -->
+	<!-- Main Dash -->
+	<div class="main_dash">
+		<header class="navbar-nav navbar-expand-lg">
+			<h3>Dashboard</h3>
+			<nav class="navbar">
+				<!-- <form id="custom-search-form" class="form-search form-horizontal pull-right">
+					<div class="input-append span12">
+						<input type="text" class="search-query" placeholder="Search">
+						<button type="submit" class="btn"><i class="icon-search"></i></button>
+					</div>
+				</form> -->
+				<ul class="navbar-nav head">
+					<li>
+						<a href="#" class="profile nav-link"></a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+		</main>
+	</div>
+
+
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- <script src="js/apex.js"></script> -->
+	<script>
+		$(document).ready(function () {
+			"use strict"; // start of use strict
+
+			/*==============================
+			Menu
+			==============================*/
+			$('.header__btn').on('click', function () {
+				$(this).toggleClass('header__btn--active');
+				$('.header').toggleClass('header--active');
+				$('.sidebar').toggleClass('sidebar--active');
+			});
+		});
+		
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASH - Signin</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="signin">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4 col-md-5 col-12">
+                    <img src="images/logo.png" class="img-fluid">
+                </div>
+                <div class="col-xl-8 col-md-7 col-12">
+                    <div class="login-form">
+                        <div class="panel">
+                            <h4>Create an account</h4>
+                            <p>Create an account to use dashboard</p>
+                            <div class="row">
+                                <button class="btn googlebtn"><span>Sign in with Google</span></button>
+                                <button class="btn applebtn"><span>Sign in with Apple</span></button>
+                            </div>
+                        </div>
+                        <div class="main-div">
+                            <form id="Login">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <label for="user" class="label">First Name</label>
+                                            <input type="text" name="first_name" id="first_name"
+                                                class="form-control input-sm" placeholder="john">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <label for="user" class="label">Last Name</label>
+                                            <input type="text" name="last_name" id="last_name"
+                                                class="form-control input-sm" placeholder="doe">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user" class="label">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail"
+                                        placeholder="suryawigunaa@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="password-field" type="password" class="form-control" name="password"
+                                        value="123456789">
+                                    <span toggle="#password-field"
+                                        class="eye-field field-icon active toggle-password"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass" class="label">Confirm Password</label>
+                                    <input id="confirm-field" type="password" class="form-control" name="password">
+                                    <span toggle="#confirm-field"
+                                        class="eye-field field-icon active confirm-password"></span>
+                                </div>
+                                <p></p>
+                                <div class="custom-checkbox ">
+                                    <input type="checkbox" class="option-input checkbox" />
+                                    <label>I agree the <a href="#">terms and conditions</a></label>
+                                </div>
+
+                                <button type="submit" class="btn">Sign In</button>
+                            </form>
+
+                        </div>
+
+                        <p>Already have an account? <a href="signin.html">Sign in here</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- show/hide password -->
+    <script>
+        $(".toggle-password").click(function () {
+            $(this).toggleClass("eye-field eye-close");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+        $(".confirm-password").click(function () {
+            $(this).toggleClass("eye-field eye-close");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "confirm") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "confirm");
+            }
+        });
+    </script>
+</body>
+
+</html>

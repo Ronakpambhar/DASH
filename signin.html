@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASH - Signin</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="signin">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-4 col-md-5 col-12">
+                    <img src="images/logo.png" class="img-fluid">
+                </div>
+                <div class="col-xl-8 col-md-7 col-12">
+                    <div class="login-form">
+                        <div class="panel">
+                            <h4>Sign in</h4>
+                            <p>Sign in to your account</p>
+                            <div class="row">
+                                <button class="btn googlebtn"><span>Sign in with Google</span></button>
+                                <button class="btn applebtn"><span>Sign in with Apple</span></button>
+                            </div>
+                       </div>
+                        <div class="main-div">
+                            <form id="Login">
+                                <div class="form-group">
+                                    <label for="user" class="label">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="suryawigunaa@gmail.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass" class="label">Password</label>
+                                    <input id="password-field" type="password" class="form-control" name="password"
+                                        value="123456789">
+                                    <span toggle="#password-field"
+                                        class="eye-field field-icon active toggle-password"></span>
+                                </div>
+                                <div class="forgot">
+                                <a href="reset.html">Forgot password?</a>
+                                  </div>
+                                <button type="submit" class="btn">Sign In</button>
+                            </form>
+                        </div>
+                        <p>Don’t have an account? <a href="signup.html">Register here</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+        <!-- show/hide password -->
+        <script>
+            $(".toggle-password").click(function () {
+                $(this).toggleClass("eye-field eye-close");
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
+        </script>
+</body>
+</html>
